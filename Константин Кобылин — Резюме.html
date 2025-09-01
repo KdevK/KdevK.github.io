@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)http://localhost:63342/learn-go/resume.html?_ijt=f1hrtap24r1uojts7v9v1596t8&_ij_reload=RELOAD_ON_SAVE# -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Константин Кобылин — Резюме</title>
+    <meta name="description" content="Резюме — Константин Кобылин">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Константин Кобылин — Резюме_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0c0f;
+            --card: #111318;
+            --muted: #a6adbb;
+            --text: #e6eaf2;
+            --accent: #7c9cff; /* поменяйте оттенок для своего стиля */
+            --accent-2: #70e1a1;
+            --ring: 0 0 0 1px rgba(255,255,255,.08), 0 8px 24px rgba(0,0,0,.35);
+            --radius: 20px;
+            --shadow-soft: 0 1px 0 rgba(255,255,255,.03) inset, 0 10px 30px rgba(0,0,0,.4);
+            --print-text: #1a1a1a;
+        }
+
+        /* Light theme (авто и по кнопке) */
+        @media (prefers-color-scheme: light) {
+            :root { --bg: #f6f7fb; --card: #ffffff; --text: #17181c; --muted:#5b616e; --ring: 0 0 0 1px rgba(12,13,15,.06), 0 8px 24px rgba(10,12,15,.08); }
+        }
+        body.light {
+            --bg: #f6f7fb; --card: #ffffff; --text: #17181c; --muted:#5b616e; --ring: 0 0 0 1px rgba(12,13,15,.06), 0 8px 24px rgba(10,12,15,.08);
+        }
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background:
+                    radial-gradient(1200px 800px at 80% -10%, rgba(124,156,255,.15), transparent 60%) no-repeat,
+                    radial-gradient(900px 600px at -10% 100%, rgba(112,225,161,.15), transparent 60%) no-repeat,
+                    var(--bg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: var(--text);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+
+        .page {
+            max-width: 1000px; margin: 48px auto; padding: 0 24px 64px; position: relative;
+        }
+
+        .actions {
+            position: sticky; top: 0; z-index: 10; display: flex; gap: 10px; justify-content: flex-end; padding: 16px 0; backdrop-filter: blur(6px);
+        }
+        .btn {
+            appearance: none; border: none; cursor: pointer; padding: 10px 14px; border-radius: 12px; background: var(--card); color: var(--text);
+            box-shadow: var(--ring); transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+            display: inline-flex; align-items: center; gap: 8px; font-weight: 600; letter-spacing:.2px;
+        }
+        .btn:hover { transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 14px 34px rgba(0,0,0,.5); }
+
+        header.card {
+            display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: center;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255,255,255,.02), transparent 40%), var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 24px; margin-bottom: 18px;
+            border: 1px solid rgba(255,255,255,.06);
+        }
+
+        .avatar {
+            width: 120px; height: 160px; border-radius: 24px; object-fit: cover; background: #22242a; box-shadow: 0 6px 18px rgba(0,0,0,.4);
+        }
+
+        h1 { font-size: 32px; line-height: 1.1; margin: 0 0 4px; letter-spacing: .2px; }
+        h2 { font-size: 18px; font-weight: 600; margin: 0; color: var(--muted); }
+
+        .tagline { margin-top: 8px; color: var(--muted); }
+
+        .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+        .chip {
+            display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; background: rgba(124,156,255,.12);
+            color: #4464d8; font-weight: 600; border: 1px solid rgba(124,156,255,.3);
+        }
+        .chip svg { opacity: .9 }
+        .chip.muted { background: rgba(255,255,255,.06); color: var(--muted); border-color: rgba(255,255,255,.14); }
+
+        .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
+
+        .section h3 { margin: 0 0 12px; font-size: 16px; letter-spacing:.3px; text-transform: uppercase; color: var(--muted); }
+        .item { position: relative; padding: 14px 0 12px; }
+        .item + .item { border-top: 1px dashed rgba(255,255,255,.1); }
+
+        .row { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+        .role { font-weight: 700; }
+        .company { color: var(--muted); font-weight: 600; }
+        .when { color: var(--muted); white-space: nowrap; }
+        .bullets { margin: 8px 0 0 0; padding-left: 20px; }
+        .bullets li { margin: 6px 0; }
+
+        .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; border:1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); margin: 6px 6px 0 0; font-weight: 600; font-size: 13px; color: var(--text); }
+
+        .meter { height: 8px; background: rgba(255,255,255,.08); border-radius: 999px; overflow: hidden; margin-top: 8px; }
+        .meter > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 999px; }
+
+        footer { text-align: center; color: var(--muted); margin-top: 10px; font-size: 13px; }
+
+        /* Print styles */
+        @media print {
+            body { background: white; color: var(--print-text); }
+            .page { margin: 0; padding: 0; }
+            .actions { display: none; }
+            .card { box-shadow: none; border: none; background: white; }
+            .chip, .pill { border-color: #dcdcdc; color: var(--print-text); background: #f6f6f6; }
+            .grid { grid-template-columns: 1fr 1fr; }
+            a { color: var(--print-text); text-decoration: none; }
+        }
+
+        /* Responsive */
+        @media (max-width: 780px) {
+            header.card { grid-template-columns: 1fr; text-align: center; }
+            .avatar { margin: 0 auto; }
+            .grid { grid-template-columns: 1fr; }
+            .row { flex-direction: column; align-items: flex-start; gap: 4px; }
+            .when { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Шапка -->
+    <header class="card">
+        <img class="avatar" src="./Константин Кобылин — Резюме_files/IMG_9670.JPG" alt="Фото профиля">
+        <div>
+            <h1>Константин Кобылин</h1>
+            <h2>Разработчик / Python</h2>
+            <p class="tagline">Дипломированный Python-разработчик с 4+ годами опыта написания проектов и с бэкграундом системного аналитика</p>
+            <div class="links">
+                <span class="chip muted">📍 Казань, Россия</span>
+                <a class="chip" href="mailto:kostya.kobylin@gmail.com">✉️ kostya.kobylin@gmail.com</a>
+                <a class="chip" href="https://t.me/seloth">⌯⌲ @seloth</a>
+                <a class="chip" href="tel:+79821178888">📞 +7(982)-117-8888</a>
+                <a class="chip" href="https://gitlab.com/KdevK">💻 GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid">
+        <!-- Левая колонка: Опыт + Проекты -->
+        <section class="card section">
+            <h3>Опыт работы</h3>
+
+            <div class="item">
+                <div class="row">
+                    <div>
+                        <div class="role">Backend-разработчик</div>
+                        <div class="company">Стартап "Студент РТ"</div>
+                    </div>
+                    <div class="when">Сен 2021 — Авг 2022</div>
+                </div>
+                <ul class="bullets">
+                    <li>Разработал сервис новостей и API сервиса партнёров на Django Rest Framework</li>
+                    <li>Добавил мобильные push уведомления через Google Firebase</li>
+                    <li>Покрывал код автотестами и рефакторил код</li>
+                </ul>
+                <div>
+                    <span class="pill">Django (DRF)</span><span class="pill">Firebase</span><span class="pill">Postgres</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <div>
+                        <div class="role">Backend-разработчик</div>
+                        <div class="company">Smart Education Lab (КФУ)</div>
+                    </div>
+                    <div class="when">Сен 2022 — Июл 2023</div>
+                </div>
+                <ul class="bullets">
+                    <li>Реализовал сервис для автоматической генерации документов</li>
+                    <li>Интегрировал новый текстовый редактор внутри сайта на библиотеке EditorJS</li>
+                    <li>Занимался поддержкой проекта и исправлял баги</li>
+                </ul>
+                <div>
+                    <span class="pill">Django</span><span class="pill">Frontend</span><span class="pill">Python-docx</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <div>
+                        <div class="role">QA инженер</div>
+                        <div class="company">ПАО "Сбербанк России"</div>
+                    </div>
+                    <div class="when">Сен 2023 — Мар 2024</div>
+                </div>
+                <ul class="bullets">
+                    <li>Тестирование Back и Front (WEB+МП) частей высоконагруженного сервиса показа вкладов</li>
+                    <li>Написание тестовой документации</li>
+                    <li>Взаимодействие с разработкой и аналитикой</li>
+                    <li>Презентация протестированного функционала на приёмке</li>
+                </ul>
+                <div>
+                    <span class="pill">Jira</span><span class="pill">Python</span><span class="pill">Charles Proxy</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <div>
+                        <div class="role">Системный аналитик</div>
+                        <div class="company">ПАО "Сбербанк России"</div>
+                    </div>
+                    <div class="when">Апр 2024 — Настоящее время</div>
+                </div>
+                <ul class="bullets">
+                    <li>Разработка требований к Back и Front (WEB+МП) частям высоконагруженного сервиса показа вкладов</li>
+                    <li>Проектирование и интеграция сервисов</li>
+                    <li>Взаимодействие с разработкой и тестированием</li>
+                    <li>Поддержка проекта и администрирование динамического контента для сервиса</li>
+                </ul>
+                <div>
+                    <span class="pill">Confluence</span><span class="pill">Jira</span><span class="pill">UML</span><span class="pill">Figma</span><span class="pill">Kotlin</span>
+                </div>
+            </div>
+
+            <br>
+
+        </section>
+
+        <!-- Правая колонка: Навыки, Образование, Прочее -->
+        <aside class="card section">
+            <h3>Ключевые навыки</h3>
+            <div class="item">
+                <div class="row" style="align-items:center;">
+                    <div style="min-width:120px;font-weight:700">Python</div>
+                    <div style="flex:1">
+                        <div class="meter">
+                            <span style="width: 90%"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="align-items:center;">
+                    <div style="min-width:120px;font-weight:700">Django</div>
+                    <div style="flex:1">
+                        <div class="meter"><span style="width: 90%"></span></div>
+                    </div>
+                </div>
+                <div class="row" style="align-items:center;">
+                    <div style="min-width:120px;font-weight:700">FastAPI</div>
+                    <div style="flex:1">
+                        <div class="meter"><span style="width: 90%"></span></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <h3>Образование</h3>
+            <div class="item">
+                <div class="row">
+                    <div>
+                        <div class="role">Бакалавр, Программная инженерия</div>
+                        <div class="company">Казанский федеральный университет / ИТИС</div>
+                    </div>
+                    <div class="when">2020 — 2025</div>
+                </div>
+                <ul class="bullets">
+                    <li>Django + Django REST Framework</li>
+                    <li>FastAPI</li>
+                    <li>Docker</li>
+                    <li>PostgreSQL</li>
+                    <li>gRPC</li>
+                    <li>WebSockets</li>
+                    <li>Google Firebase</li>
+                </ul>
+            </div>
+            <br>
+            <h3>Языки</h3>
+            <div class="item">
+                <div>Русский — родной</div>
+                <div>Английский — C1</div>
+                <div>Турецкий — B1</div>
+            </div>
+            <br>
+            <h3>Личные проекты</h3>
+            <div class="item">
+                <div class="row">
+                    <div class="role">Troddo</div>
+                </div>
+                <div class="company">Web-сервис для переноса музыки для 4 платформ: Spotify, Deezer, LastFM, Youtube Music</div>
+                <div>
+                    <a class="pill" href="https://gitlab.com/overlord_._/semesterwork_troddo">GitHub Repo</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <div class="role">Downdetector</div>
+                </div>
+                <div class="company">Web-сервис для отслеживания статуса доступности сохранённых пользователем сайтов и сохранением их в историю</div>
+                <div>
+                    <a class="pill" href="https://gitlab.com/KdevK/testdjango">GitHub Repo</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="row">
+                    <div class="role">VK</div>
+                </div>
+                <div class="company">Соцсеть в стиле ВКонтакте с профилями, созданием постов и оставлением комментариев, а также возможностью отправлять сообщения с помощью Websockets</div>
+                <div>
+                    <a class="pill" href="https://gitlab.com/KdevK/vkdevk">GitHub Repo</a>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+</div>
+
+<!-- Подсказки по редактированию (не печатаются) -->
+<script>
+    // Меняйте акцентные цвета под свой бренд
+    // document.documentElement.style.setProperty('--accent', '#FF7E79');
+    // document.documentElement.style.setProperty('--accent-2', '#FFD36E');
+</script>
+
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>
