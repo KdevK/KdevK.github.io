@@ -11,31 +11,21 @@
             min-height: 250px;
         }
 
+        .photo-placeholder {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 180px;
+            height: 270px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
         .photo-placeholder img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-        }
-
-        .photo-placeholder span {
-            padding: 12px;
-        }
-
-        @media (max-width: 700px) {
-            .header-main {
-                padding-right: 0;
-                min-height: 0;
-            }
-
-            .photo-placeholder {
-                position: relative;
-                top: auto;
-                right: auto;
-                width: 120px;
-                height: 180px;
-                margin: 18px 0 0 auto;
-            }
         }
 
         @page {
