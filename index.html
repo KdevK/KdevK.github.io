@@ -5,47 +5,38 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Кобылин Константин — BACKEND DEVELOPER · GO</title>
     <style>
-    .header-main {
-      position: relative;
-      padding-right: 220px;
-      min-height: 250px;
-    }
-    .photo-placeholder {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 180px;
-      height: 270px;
-      border: 1.5px dashed #9aa3ad;
-      border-radius: 10px;
-      background: #f6f7f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #8b949e;
-      font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      box-sizing: border-box;
-    }
-    .photo-placeholder span {
-      padding: 12px;
-    }
-    @media (max-width: 700px) {
-      .header-main {
-        padding-right: 0;
-        min-height: 0;
-      }
-      .photo-placeholder {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 120px;
-        height: 180px;
-        margin: 18px 0 0 auto;
-      }
-    }
+        .header-main {
+            position: relative;
+            padding-right: 220px;
+            min-height: 250px;
+        }
+
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-placeholder span {
+            padding: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .header-main {
+                padding-right: 0;
+                min-height: 0;
+            }
+
+            .photo-placeholder {
+                position: relative;
+                top: auto;
+                right: auto;
+                width: 120px;
+                height: 180px;
+                margin: 18px 0 0 auto;
+            }
+        }
 
         @page {
             size: A4;
@@ -123,16 +114,43 @@
             color: inherit;
             text-decoration: none
         }
-        
-        .profiles { display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
-        .profile-link, .project-link {
-            display:inline-flex; align-items:center; gap:7px; padding:6px 9px;
-            border:1px solid var(--line); border-radius:6px; background:#fff;
-            color:#344054; font-size:11px; font-weight:750;
+
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 12px;
         }
-        .profile-link:hover, .project-link:hover { border-color:#b8c5d8; color:var(--accent); }
-        .profile-link svg, .project-link svg { width:14px; height:14px; flex:0 0 14px; }
-        .project-link { margin-top:9px; color:var(--accent); font-weight:800; }
+
+        .profile-link, .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 6px 9px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: #fff;
+            color: #344054;
+            font-size: 11px;
+            font-weight: 750;
+        }
+
+        .profile-link:hover, .project-link:hover {
+            border-color: #b8c5d8;
+            color: var(--accent);
+        }
+
+        .profile-link svg, .project-link svg {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 14px;
+        }
+
+        .project-link {
+            margin-top: 9px;
+            color: var(--accent);
+            font-weight: 800;
+        }
 
 
         .eyebrow {
@@ -322,38 +340,38 @@
 <body>
 <main class="page">
     <header>
-      <div class="header-main">
+        <div class="header-main">
 
-        <h1 class="name">Кобылин Константин</h1>
-        <div class="role">BACKEND DEVELOPER · GO</div>
-        <div class="sub">Системный аналитик → Automation QA → Backend Engineering</div>
-        <div class="contact">
-            <span>Казань, Россия · удалёнка предпочтительна</span>
-            <a href="mailto:kostya.kobylin@gmail.com">kostya.kobylin@gmail.com</a>
-            <span>+7 982 117-88-88</span>
-            <a href="http://t.me/seloth">@seloth</a>
-            <a href="https://www.linkedin.com/in/seloth">linkedin.com/in/seloth</a>
-        </div>
-        <div class="profiles">
-            <a class="profile-link" href="https://github.com/KdevK?tab=repositories">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.57.1.78-.25.78-.55v-2.14c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.54-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17A10.9 10.9 0 0 1 12 6.06c.97 0 1.94.13 2.85.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.35.78 1.05.78 2.12v3.15c0 .31.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/>
-                </svg>
-                GitHub · KdevK
-            </a>
-            <a class="profile-link" href="https://gitlab.com/users/KdevK/projects">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="m22.65 13.25-1.22-3.75-2.42-7.42a.62.62 0 0 0-1.18 0l-2.42 7.42H8.59L6.17 2.08a.62.62 0 0 0-1.18 0L2.57 9.5l-1.22 3.75a1.24 1.24 0 0 0 .45 1.38l10.2 7.41 10.2-7.41a1.24 1.24 0 0 0 .45-1.38ZM12 21.01l-3.41-10.5h6.82L12 21.01Z"/>
-                </svg>
-                GitLab · KdevK
-            </a>
-        </div>
+            <h1 class="name">Кобылин Константин</h1>
+            <div class="role">BACKEND DEVELOPER · GO</div>
+            <div class="sub">Системный аналитик → Automation QA → Backend Engineering</div>
+            <div class="contact">
+                <span>Казань, Россия · удалёнка предпочтительна</span>
+                <a href="mailto:kostya.kobylin@gmail.com">kostya.kobylin@gmail.com</a>
+                <span>+7 982 117-88-88</span>
+                <a href="http://t.me/seloth">@seloth</a>
+                <a href="https://www.linkedin.com/in/seloth">linkedin.com/in/seloth</a>
+            </div>
+            <div class="profiles">
+                <a class="profile-link" href="https://github.com/KdevK?tab=repositories">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.57.1.78-.25.78-.55v-2.14c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.54-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17A10.9 10.9 0 0 1 12 6.06c.97 0 1.94.13 2.85.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.35.78 1.05.78 2.12v3.15c0 .31.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/>
+                    </svg>
+                    GitHub · KdevK
+                </a>
+                <a class="profile-link" href="https://gitlab.com/users/KdevK/projects">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="m22.65 13.25-1.22-3.75-2.42-7.42a.62.62 0 0 0-1.18 0l-2.42 7.42H8.59L6.17 2.08a.62.62 0 0 0-1.18 0L2.57 9.5l-1.22 3.75a1.24 1.24 0 0 0 .45 1.38l10.2 7.41 10.2-7.41a1.24 1.24 0 0 0 .45-1.38ZM12 21.01l-3.41-10.5h6.82L12 21.01Z"/>
+                    </svg>
+                    GitLab · KdevK
+                </a>
+            </div>
 
-        <div class="photo-placeholder" aria-label="Место для фотографии">
-          <img src="photo.jpg" alt="Фото">
+            <div class="photo-placeholder" aria-label="Место для фотографии">
+                <img src="photo.jpg" alt="Фото">
+            </div>
         </div>
-      </div>
-</header>
+    </header>
     <section>
         <div class="eyebrow">ОБО МНЕ</div>
         <p class="intro">Инженер, переходящий в Go backend-разработку, с production-опытом в высоконагруженном финтехе,
@@ -406,7 +424,7 @@
             <div class="flow"><span>REST / gRPC</span><b class="arrow">→</b><span>API</span><b class="arrow">→</b><span>PostgreSQL</span><b
                     class="arrow">→</b><span>Kafka</span><b class="arrow">→</b><span>Worker Pool</span><b class="arrow">→</b><span>Handlers</span>
             </div>
-             <a class="project-link" href="https://github.com/KdevK/task-queue">
+            <a class="project-link" href="https://github.com/KdevK/task-queue">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.57.1.78-.25.78-.55v-2.14c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.54-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17A10.9 10.9 0 0 1 12 6.06c.97 0 1.94.13 2.85.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.67 5.35-5.21 5.64.41.35.78 1.05.78 2.12v3.15c0 .31.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/>
                 </svg>
